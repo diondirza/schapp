@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Booking Schedule</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="app">
+    <h1>Meeting Schedule</h1>
+    <section class="content">
+      <div class='schedule-wrapper'>
+        <div class="schedule">
+          <div class="ticks">
+            <div class="tick">09.00</div>
+            <div class="tick">10.00</div>
+            <div class="tick">11.00</div>
+            <div class="tick">12.00</div>
+            <div class="tick">13.00</div>
+            <div class="tick">14.00</div>
+            <div class="tick">15.00</div>
+            <div class="tick">16.00</div>
+            <div class="tick">17.00</div>
+            <div class="tick">18.00</div>
+            <div class="tick">19.00</div>
+            <div class="tick">20.00</div>
+            <div class="tick">21.00</div>
+          </div>
+          <div class="bars">
+            <!-- <div class="bar" style="width: 600px; height: 120px; bottom: 120px; left: 0px;"> Meeting - New</div> -->
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <ul>
+          <li class="row">
+            <label for='title'>Title</label>
+            <input name="title" type="text" placeholder="Meeting name" required />
+            <span class="validity"></span>
+          </li>
+          <li class="row">
+            <label for='start'>Start time</label>
+            <input name="start" type="time" min="09:00" max="21:00" required />
+            <span class="validity"></span>
+          </li>
+          <li class="row">
+            <label for='end'>End time</label>
+            <input name="end" type="time" min="09:00" max="21:00" required />
+            <span class="validity"></span>
+          </li>
+          <li class="row">
+            <button>Add Meeting</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

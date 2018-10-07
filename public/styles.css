@@ -1,0 +1,147 @@
+body {
+  background-color: #f3f3f3;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  width: 600px;
+}
+
+.form > ul {
+  background-color: whitesmoke;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.form .row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em;
+}
+
+.form .row > label {
+  padding: 0.5em 1em 0.5em 0;
+  flex: 1;
+}
+
+.form .row > input {
+  flex: 2;
+}
+
+.form .row > input + span {
+  position: relative;
+}
+
+.form .row > input + span:after {
+  position: absolute;
+  padding-left: 5px;
+  top: 6px;
+  left: 0;
+}
+
+.form .row > input:invalid + span:after {
+  content: '✖';
+  color: red;
+}
+
+.form .row > input:valid + span:after {
+  content: '✓';
+  color: green;
+}
+
+.form .row > input,
+.form .row > button {
+  padding: 0.5em;
+}
+
+.form .row > button {
+  background: gray;
+  color: white;
+  border: 0;
+}
+
+.schedule-wrapper {
+  width: 800px;
+  height: 900px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px 0;
+}
+
+.schedule {
+  width: 600px;
+  height: 1440px;
+  border-left: 1px solid #6460bb;
+  border-bottom: 1px solid #6460bb;
+  position: relative;
+  margin: 0 auto;
+}
+
+.schedule .ticks {
+  position: absolute;
+  left: -50px;
+  bottom: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.schedule .ticks .tick {
+  height: 120px;
+  position: relative;
+}
+
+.schedule .ticks .tick:first-child {
+  height: 0px;
+}
+
+.schedule .ticks .tick:not(:first-child):not(:last-child):after {
+  position: absolute;
+  height: 5px;
+  width: 10px;
+  top: 8px;
+  content: '';
+  right: -19px;
+  border-top: 1px solid #6460bb;
+  z-index: 1;
+}
+
+.schedule .bars {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: rotate(180deg);
+}
+
+.schedule .bars .bar {
+  position: absolute;
+  background-color: #83c6b6;
+  border: 2px solid #e0e0e0;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+}
