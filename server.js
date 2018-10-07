@@ -3,7 +3,7 @@ const serve = require('koa-static');
 const debug = require('debug')('app');
 
 const app = new Koa();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(serve(`${__dirname}/public`));
 
