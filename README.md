@@ -1,5 +1,9 @@
 # Meeting Schedule
 
+## Preview
+
+Please follow this [link](http://rm-schapp.herokuapp.com)
+
 ## How to run
 
 - clone this project
