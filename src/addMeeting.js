@@ -1,5 +1,6 @@
 import render from './render';
 import { toMinutes } from './helpers';
+import { scheduleData } from './mock';
 
 // this function will accept multiple arguments
 export default function addMeeting(...args) {
